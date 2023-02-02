@@ -1,9 +1,6 @@
 package com.uzb7.phoneapp.data.local
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.uzb7.phoneapp.model.Phone
 
 @Dao
@@ -17,4 +14,7 @@ interface PhoneDao {
 
     @Query("SELECT * FROM phone WHERE id=:id")
     fun getPhoneId(id:Long):Phone
+
+    @Delete
+    fun deletePhone(phone:Phone)
 }

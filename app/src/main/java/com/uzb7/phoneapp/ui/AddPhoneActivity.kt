@@ -22,7 +22,7 @@ class AddPhoneActivity : AppCompatActivity() {
         binding.apply {
             bAdd.setOnClickListener {
                 if (etAbout.text.toString().isNotEmpty() && etName.text.toString().isNotEmpty()) {
-                    val phone= Phone(phoneName = etName.toString(), details = etAbout.toString())
+                    val phone= Phone(phoneName = etName.text.toString(), details = etAbout.text.toString())
                     repository.savePhone(phone)
                     finish()
                 }

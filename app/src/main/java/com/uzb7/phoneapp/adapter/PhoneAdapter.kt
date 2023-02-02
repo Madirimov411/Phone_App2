@@ -1,4 +1,4 @@
-package com.uzb7.phoneapp.adapter
+﻿package com.uzb7.phoneapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +12,13 @@ import com.uzb7.phoneapp.model.Phone
 class PhoneAdapter(val phones:ArrayList<Phone>):RecyclerView.Adapter<PhoneAdapter.PhoneViewHolder>() {
 
     var send:((Phone)->Unit)?=null
+    var delete:((Phone)->Unit)?=null
+
+    fun submitList(list:ArrayList<Phone>){
+        phones.clear()
+        phones.addAll(list)
+        notifyDataSetChanged()
+    }
 
     class PhoneViewHolder(view: View):RecyclerView.ViewHolder(view) {
         val tvPhoneName=view.findViewById<TextView>(R.id.tvPhoneName)
@@ -30,6 +37,10 @@ class PhoneAdapter(val phones:ArrayList<Phone>):RecyclerView.Adapter<PhoneAdapte
             tvPhoneName.text=phone.phoneName
             cvAbout.setOnClickListener {
                 send?.invoke(phone)
+            }
+            cvAbout.setOnLongClickListener {
+                delete?.invoke(phone)
+                true
             }
         }
 

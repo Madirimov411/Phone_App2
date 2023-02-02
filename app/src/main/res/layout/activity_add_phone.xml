@@ -29,9 +29,9 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Telefon nomi"
+                    android:text="Telefon qo'shish"
                     android:textColor="@color/black"
-                    android:textSize="19sp"
+                    android:textSize="22sp"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"/>
 
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="#DED7D7"
-            android:hint="Phone name"
+            android:hint="Telefon nomi"
             android:paddingVertical="15dp"
             android:paddingHorizontal="25dp"/>
 
@@ -66,7 +66,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#DED7D7"
-            android:hint="Phone features"
+            android:hint="Telefon haqida"
             android:paddingVertical="15dp"
             android:paddingHorizontal="25dp"/>
 
@@ -76,7 +76,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
-            android:text="Add"
+            android:text="Qo'shish"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="16sp"

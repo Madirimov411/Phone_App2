@@ -26,4 +26,8 @@ class PhoneRepository {
         return phoneDao.getPhoneId(id)
     }
 
+    fun deletePhone(phone:Phone){
+        phoneDao.deletePhone(phone)
+    }
+
 }

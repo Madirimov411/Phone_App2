@@ -12,7 +12,7 @@
         android:theme="@style/Theme.PhoneApp"
         tools:targetApi="31">
         <activity
-            android:name=".PhoneAboutActivity"
+            android:name=".ui.PhoneAboutActivity"
             android:exported="false" />
         <activity
             android:name=".ui.PhonesActivity"
